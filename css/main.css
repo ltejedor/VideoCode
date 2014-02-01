@@ -21,6 +21,12 @@ textarea {
 html {
     font-size: 1em;
     line-height: 1.4;
+    height: 100%;
+}
+
+body{
+    overflow: hidden;
+    height: 100%;
 }
 
 /*
@@ -97,16 +103,68 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+#editor {
+    margin: 0;
+    position: absolute;
+    top: 300px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 500px;
+}
 
+.buttons{
+    margin: 200px auto;
+    display: block;
+    width: 100px;
+    z-index: 100;
+    position: relative;
+}
 
+.btn{
+    display: block;
+    margin: 10px auto;
+    width: 180px;
+}
 
+.overlay {
+    width: 100%;
+    height: 800px;
+    background: #81DBBA; /* Old browsers */
+    background: -moz-linear-gradient(110deg, #81DBBA 15%, #7D43A3 50%, #81DBBA 80%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(15%,#81DBBA), color-stop(50%,#7D43A3), color-stop(80%,#81DBBA)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(110deg, #81DBBA 15%, #7D43A3 50%, #81DBBA 80%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(110deg, #81DBBA 15%, #7D43A3 50%, #81DBBA 80%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(110deg, #81DBBA 15%, #7D43A3 50%, #81DBBA 80%); /* IE10+ */
+    background: linear-gradient(155deg, #81DBBA 15%, #7D43A3 50%, #81DBBA 80%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#81DBBA', endColorstr='#7D43A3',GradientType=0 ); /* IE6-9 */
+    background-size: 100% 500%;
+    background-position: 0% 0%;
+    -webkit-animation-name: colorful;
+    -webkit-animation-duration: 200s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+}
 
+@-webkit-keyframes colorful {
+    from {
+        background-position: 0% 0%;
+    }
 
+    to {
+        background-position: 0% 500%;
+    }
+}
 
-
-
-
-
+.clearHover{
+    position: absolute;
+    height: 800px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, .4);
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
 
 
 

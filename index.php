@@ -16,6 +16,8 @@
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/bootstrap.css">
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+        <script src="js/jquery.js"></script>
+        <script src="js/bootstrap.js"></script>
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -23,18 +25,48 @@
         <![endif]-->
 
         <!-- Add your site or application content here -->
-        <div class="container">
-            <div class="col-md-4">
-            </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-5">
 
-            <div class=
+                    <div class="methods">
+                        wiadlkfjas
+                    </div>
+
+                    <pre id="editor">function foo(items) {
+                        var i;
+                        for (i = 0; i &lt; items.length; i++) {
+                            alert("Cool Cat Video " + items[i]);
+                        }
+                    }</pre>
+
+                    <script src="src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
+                    <script>
+                        var editor = ace.edit("editor");
+                        editor.setTheme("ace/theme/tomorrow");
+                        editor.getSession().setMode("ace/mode/javascript");
+                    </script>
+
+
+                </div>
+
+                <div class="col-md-7 overlay">
+                    <div class="buttons">
+                        <button type="button" class="btn btn-primary">Take a Video</button>
+                        <button type="button" class="btn btn-primary">Import from Vine</button>
+                        <button type="button" class="btn btn-primary">Import from Instagram</button>
+                    </div>
+                    <div class="clearHover">
+                    </div>
+                </div>
+            </div>
 
         </div>
 
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
+
+
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
