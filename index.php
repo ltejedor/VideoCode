@@ -46,6 +46,7 @@
             });
             $( "ul, li" ).disableSelection();
           });
+
         </script>
     </head>
     <body>
@@ -91,11 +92,12 @@
                           </div>
                     </div>
                     <div id="tabs">
-                          <ul>
-                            <li><a href="#tabs-1">Nunc tincidunt</a></li>
-                            <li><a href="#tabs-2">Proin dolor</a></li>
-                          </ul>
-                        <div class="tabs-2">
+                        <div class="btn-group">
+                          <button type="button" class="tab1 btn btn-default">Methods Listed</button>
+                          <button type="button" class="tab2 btn btn-default">See Code</button>
+                        </div>
+
+                        <div class="tabs-1">
                             <ul>
                               <li id="draggable" class="ui-state-highlight">Drag me down</li>
                             </ul>
@@ -109,7 +111,7 @@
                             </ul>
                         </div>
 
-                        <div id="tabs-1">
+                        <div class="tabs-2 hidden">
                             <pre id="editor">function foo(items) {
                                 var i;
                                 for (i = 0; i &lt; items.length; i++) {

@@ -111,6 +111,10 @@ textarea {
     font-size: 1.5em;
 }
 
+.hidden{
+    display: none;
+}
+
 #logo{
     color: #44A682;
 }
