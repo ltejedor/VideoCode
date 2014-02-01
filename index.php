@@ -20,6 +20,33 @@
         <script src="js/jquery.js"></script>
         <script src="js/jquery-ui-1.9.2.custom.min.js"></script>
         <script src="js/bootstrap.js"></script>
+
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+
+        <script>
+        $(function() {
+            $( "#slider" ).slider({
+                range: true,
+                values: [17, 67]
+            });
+            $( "#slider2" ).slider({
+                range: true,
+                values: [2, 67]
+            });
+        });
+
+          $(function() {
+            $( "#sortable" ).sortable({
+              revert: true
+            });
+            $( "#draggable" ).draggable({
+              connectToSortable: "#sortable",
+              helper: "clone",
+              revert: "invalid"
+            });
+            $( "ul, li" ).disableSelection();
+          });
+        </script>
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -27,27 +54,77 @@
         <![endif]-->
 
         <!-- Add your site or application content here -->
-        <div class="container-fluid">
+        <ul class="nav nav-tabs">
+          <li><a id="logo" href="#">VidCode</a></li>
+        </ul>
+                <div class="container-fluid">
             <div class="row">
                 <div class="col-md-5">
 
                     <div class="methods">
-                        wiadlkfjas
+
+                        <div class="col-md-10">
+                            <div id="slider"></div>
+                        </div>
+                        <div class="col-md-2">speed</div>
+                        <div class="col-md-10">
+                            <div id="slider2"></div>
+                        </div>
+                        <div class="col-md-2">reverse</div>
+
+                        <button class="btn btn-method">Method name 1</button>
+                        <button class="btn leftspace btn-method">Method name 2</button>
+
+                        <button class="btn btn-method">Method name 3</button>
+                        <button class="btn leftspace btn-method">Method name 4</button>
+
+                          <div class="checkbox">
+                            <label>
+                              <input type="checkbox"> Check one
+                            </label>
+                          </div>
+
+                          <div class="checkbox">
+                            <label>
+                              <input type="checkbox"> Check me out
+                            </label>
+                          </div>
                     </div>
+                    <div id="tabs">
+                          <ul>
+                            <li><a href="#tabs-1">Nunc tincidunt</a></li>
+                            <li><a href="#tabs-2">Proin dolor</a></li>
+                          </ul>
+                        <div class="tabs-2">
+                            <ul>
+                              <li id="draggable" class="ui-state-highlight">Drag me down</li>
+                            </ul>
 
-                    <pre id="editor">function foo(items) {
-                        var i;
-                        for (i = 0; i &lt; items.length; i++) {
-                            alert("Cool Cat Video " + items[i]);
-                        }
-                    }</pre>
+                            <ul id="sortable">
+                              <li class="ui-state-default">Item 1</li>
+                              <li class="ui-state-default">Item 2</li>
+                              <li class="ui-state-default">Item 3</li>
+                              <li class="ui-state-default">Item 4</li>
+                              <li class="ui-state-default">Item 5</li>
+                            </ul>
+                        </div>
 
-                    <script src="src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
-                    <script>
-                        var editor = ace.edit("editor");
-                        editor.setTheme("ace/theme/tomorrow");
-                        editor.getSession().setMode("ace/mode/javascript");
-                    </script>
+                        <div id="tabs-1">
+                            <pre id="editor">function foo(items) {
+                                var i;
+                                for (i = 0; i &lt; items.length; i++) {
+                                    alert("Cool Cat Video " + items[i]);
+                                }
+                            }</pre>
+                        </div>
+
+                        <script src="src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
+                        <script>
+                            var editor = ace.edit("editor");
+                            editor.setTheme("ace/theme/tomorrow");
+                            editor.getSession().setMode("ace/mode/javascript");
+                        </script>
+                    </div>
 
 
                 </div>

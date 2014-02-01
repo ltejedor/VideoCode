@@ -19,12 +19,14 @@ textarea {
 }
 
 html {
+    font-family: 'Open Sans', sans-serif!important;
     font-size: 1em;
     line-height: 1.4;
     height: 100%;
 }
 
 body{
+    font-family: 'Open Sans', sans-serif!important;
     overflow: hidden;
     height: 100%;
 }
@@ -103,6 +105,20 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+.nav a{
+    font-family: 'Open Sans', sans-serif!important;
+    font-weight: 700;
+    font-size: 1.5em;
+}
+
+#logo{
+    color: #44A682;
+}
+
+.methods{
+    margin-top: 35px;
+}
+
 #editor {
     margin: 0;
     position: absolute;
@@ -120,6 +136,20 @@ textarea {
     z-index: 100;
     position: relative;
 }
+
+.btn-method{
+    background-color: #44A682;
+    color: #fff;
+    height: 40px;
+    }
+.btn-method:hover{
+    color: #fff!important;
+    background-color: #2A7A5D;
+}
+
+.leftspace{
+    margin-left: 25px!important;
+    }
 
 .btn{
     display: block;
