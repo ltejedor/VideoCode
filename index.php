@@ -15,8 +15,10 @@
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/custom-theme/jquery-ui-1.9.2.custom.css">
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
         <script src="js/jquery.js"></script>
+        <script src="js/jquery-ui-1.9.2.custom.min.js"></script>
         <script src="js/bootstrap.js"></script>
     </head>
     <body>
