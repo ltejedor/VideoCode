@@ -24,6 +24,12 @@
 
         <!-- Add your site or application content here -->
         <div class="container">
+            <div class="col-md-4">
+            </div>
+
+            <div class=
+
+        </div>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
