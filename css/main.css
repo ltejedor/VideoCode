@@ -105,13 +105,59 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
-/* first screen that animates under edit menu */
+input{
+    width: 400px;
+}
+
+.uploadbtn{
+    float: right;
+    width: 120px!important;
+    margin-right: 25px!important;
+    }
+
+/* Popup upload video */
+.popup{
+    margin: 200px 0 0 300px;
+    position: fixed;
+    height: 50px;
+    width: 600px;
+    padding: 10px 50px 90px 50px;
+    background-color: #fff;
+    z-index: 10000000000;
+
+    -webkit-box-shadow: 9px 0px 23px 0px rgba(50, 50, 50, 0.3);
+    -moz-box-shadow:    9px 0px 23px 0px rgba(50, 50, 50, 0.3);
+    box-shadow:         9px 0px 23px 0px rgba(50, 50, 50, 0.3);
+
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    }
+
+
+/* Getting started (first) */
+
+.checkbtn{
+    float: left;
+    margin-left: 90px;
+}
+
+.getting-started{
+    position: absolute!important;
+    z-index: 499;
+    width: 400px!important;
+}
+
+
+
+/* second screen that animates under edit menu */
 
 .displayfirst{
     position: absolute!important;
     width: 400px!important;
     background-color: blue;
     z-index: 500;
+    margin-left: -500px;
 }
 
 .large-button{
@@ -196,6 +242,7 @@ textarea {
     -moz-border-radius: 7px;
     border-radius: 7px;
 }
+
 
 .pullLeft{
     margin-left: -40px;
