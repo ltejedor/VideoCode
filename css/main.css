@@ -104,6 +104,28 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+
+/* first screen that animates under edit menu */
+
+.displayfirst{
+    position: absolute!important;
+    width: 500px!important;
+    background-color: blue;
+    left: 0!important;
+    z-index: 500;
+}
+
+.large-button{
+    width: 500px;
+    margin-left: -15px;
+    background-color: #44A682;
+}
+
+
+/* main screen and edit menu */
+
+
+
 .hidden2{
     margin-top: 3px;
     height: 1px;
@@ -140,6 +162,10 @@ ul{
     font-size: 1.5em;
 }
 
+.small{
+    font-size: 1.1em!important;
+    }
+
 .hidden{
     display: none;
 }
@@ -160,6 +186,7 @@ ul{
     left: 0;
     right: 0;
     height: 500px;
+    z-index: 3;
 }
 
 
@@ -207,7 +234,7 @@ ul{
     background-size: 100% 500%;
     background-position: 0% 0%;
     -webkit-animation-name: colorful;
-    -webkit-animation-duration: 200s;
+    -webkit-animation-duration: 150s;
     -webkit-animation-timing-function: linear;
     -webkit-animation-iteration-count: infinite;
 }
