@@ -126,6 +126,11 @@ ul{
     list-style-type: none;
 }
 
+.btn-primary{
+    font-weight: 600!important;
+    height: 45px;
+}
+
 .activebtn{
 }
 
@@ -156,6 +161,8 @@ ul{
     right: 0;
     height: 500px;
 }
+
+
 
 .buttons{
     margin: 200px auto;

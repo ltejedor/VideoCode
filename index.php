@@ -27,11 +27,11 @@
         $(function() {
             $( "#slider" ).slider({
                 range: true,
-                values: [17, 67]
+                values: [17, 78]
             });
             $( "#slider2" ).slider({
                 range: true,
-                values: [2, 67]
+                values: [16, 67]
             });
         });
 
@@ -85,19 +85,19 @@
                         <div class="col-md-10">
                             <div id="slider"></div>
                         </div>
-                        <div class="col-md-2">speed</div>
+                        <div class="col-md-2">hue</div>
                         <div class="col-md-10">
                             <div id="slider2"></div>
                         </div>
-                        <div class="col-md-2">reverse</div>
+                        <div class="col-md-2">fade</div>
 
                         <div class="col-md-5 pullLeft">
-                            <ul><li id="draggable" class="btn btn-method">Method name 1</button></li></ul>
-                            <ul><li id="draggable2" class="btn btn-method">Method name 2</button></li></ul>
+                            <ul><li id="draggable" class="btn btn-method">Filter</button></li></ul>
+                            <ul><li id="draggable2" class="btn btn-method">Rotate</button></li></ul>
                         </div>
                         <div class="col-md-6">
-                            <ul><li id="draggable3" class="btn btn-method">Method name 3</button></li></ul>
-                            <ul><li id="draggable4" class="btn btn-method">Method name 4</button></li></ul>
+                            <ul><li id="draggable3" class="btn btn-method">Blur</button></li></ul>
+                            <ul><li id="draggable4" class="btn btn-method">Shake</button></li></ul>
                         </div>
                         <br /><br /><br /><br /><br /><br /><br /><br />
                         <div class="checkbox">
@@ -115,8 +115,8 @@
                     </div>
                     <div id="tabs">
                         <div class="btn-group">
-                          <button type="button" class="tab1 btn btn-default">Methods Listed</button>
-                          <button type="button" class="tab2 btn btn-default">See Code</button>
+                          <button type="button" class="tab1 btn btn-default">Visual Edit</button>
+                          <button type="button" class="tab2 btn btn-default">Code Edit</button>
                         </div>
 
                         <div class="tabs-1">
