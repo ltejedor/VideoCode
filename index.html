@@ -169,26 +169,14 @@ editor.setValue(code);
                         <div class="col-md-2">fade</div>
 
                         <div class="col-md-5 pullLeft">
-                            <ul><li id="draggable" class="btn btn-method">Blur</button></li></ul>
+                            <ul><li id="draggable" class="btn btn-method">Pixel List</button></li></ul>
                             <ul><li id="draggable2" class="btn btn-method">Black &amp; White</button></li></ul>
                         </div>
                         <div class="col-md-6">
                             <ul><li id="draggable3" class="btn btn-method">Invert</button></li></ul>
                             <ul><li id="draggable4" class="btn btn-method">Scrubbed</button></li></ul>
                         </div>
-                        <br /><br /><br /><br /><br /><br /><br /><br />
-                        <div class="checkbox">
-                            <label>
-                              <input type="checkbox"> Check one
-                            </label>
-                        </div>
 
-
-                        <div class="checkbox">
-                            <label>
-                              <input type="checkbox"> Check me out
-                            </label>
-                        </div>
                     </div>
                     <div id="tabs">
                         <div class="btn-group">
@@ -205,6 +193,7 @@ editor.setValue(code);
                               <li class="hidden2 ui-state-default"></li>
                               <li class="hidden2 ui-state-default"></li>
                             </ul>
+
                         </div>
                         <div class="tabs-2 hidden">
 
@@ -212,7 +201,9 @@ editor.setValue(code);
     for (var i = 0; i &lt; items.length; i++) {
         alert("Cool Cat Video " + items[i]);
     }
+
 }</pre>
+
                         </div>
 
                         <script src="src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
@@ -223,21 +214,28 @@ editor.setValue(code);
                         </script>
                     </div>
 
-
+                    <button class="runbtn btn btn-primary">Run</button>
                 </div>
+
 
                 <div class="col-md-7 overlay">
 
-                    <video class="video1" width="100%" controls>
+                    <video class="video1 hidden" width="100%" controls>
 
                         <source src="img/wha_color.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
 
                     </video>
 
+                    <video class="video2 hidden" width="100%" controls>
+
+                        <source src="img/what_bw.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+
+                    </video>
+
                     <div class="buttons">
-                        <button type="button" class="btn btn-primary">Take a Video</button>
-                        <button type="button" class="btn btn-primary">Import from Vine</button>
-                        <button type="button" class="btn btn-primary">Import from Instagram</button>
+                        <button type="button" class="btn btn-primary uploadfirst">Take a Video</button>
+                        <button type="button" class="btn btn-primary uploadfirst">Import from Vine</button>
+                        <button type="button" class="btn btn-primary uploadfirst">Import from Instagram</button>
                     </div>
                     <div class="clearHover">
                     </div>

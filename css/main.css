@@ -119,6 +119,12 @@ textarea {
     margin-left: 45px;
 }
 
+.video2{
+    position: absolute;
+    z-index: 5;
+    margin-left: 45px;
+}
+
 
 
 /* Popup upload video */
@@ -228,6 +234,17 @@ textarea {
   background: -o-linear-gradient(top, #44A682, #44A682);
 
 }
+
+.btn-group{
+    margin-top: 62px;
+}
+
+.runbtn{
+position: absolute!important;
+z-index: 10000000;
+right: 35px;
+top: 460px;
+    }
 
 /* main screen and edit menu */
 
@@ -369,6 +386,11 @@ ul{
         background-position: 0% 500%;
     }
 }
+
+.blackbg{
+    background: #000!important;
+    opacity: 1;
+    }
 
 .clearHover{
     position: absolute;

@@ -25,4 +25,23 @@ $( document ).ready(function() {
 		    	$(".getting-started").addClass("hidden2");
 		    });
     });
+
+
+    $(".uploadfirst").click(function(){
+    	$(".popup").removeClass("hidden");
+    });
+
+
+    $(".uploadbtn").click(function(){
+    	$(".popup").addClass("hidden");
+    	$(".video1").removeClass("hidden");
+    	$(".uploadfirst").addClass("hidden");
+    	$(".clearHover").addClass("hidden");
+    	$(".overlay").addClass("blackbg");
+    });
+
+    $(".runbtn").click(function(){
+    	$(".video1").addClass("hidden");
+    	$(".video2").removeClass("hidden");
+    });
 });
