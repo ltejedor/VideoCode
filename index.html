@@ -48,7 +48,28 @@
             $( "#draggable2" ).draggable({
               connectToSortable: "#sortable",
               helper: "clone",
-              revert: "invalid"
+              revert: "invalid",
+              stop: function( event, ui ) {
+                var code = "\
+function pixelate() {\n\
+    movie.play();\n\
+    movie.interval(1000, blackAndWhiteProcessing);\n\
+}\n\
+\n\
+function blackAndWhiteProcessing() {\n\
+    foreach (row in movie.pixelRows) {\n\
+        foreach (pixel in row.pixels) {\n\
+            pixel = convertToBlackAndWhite(pixel);\n\
+        }\n\
+    }\n\
+}\n\
+\n\
+pixelate();";
+
+editor.setValue(code);
+              }
+
+
             });
 
             $( "#draggable3" ).draggable({
@@ -60,7 +81,32 @@
             $( "#draggable4" ).draggable({
               connectToSortable: "#sortable",
               helper: "clone",
-              revert: "invalid"
+              revert: "invalid",
+              stop: function( event, ui ) {
+                var code = "\
+function pixelate() {\n\
+    movie.play();\n\
+    movie.interval(1000, blackAndWhiteProcessing);\n\
+    movie.interval(100, scrubProcessing);\n\
+}\n\
+\n\
+function blackAndWhiteProcessing() {\n\
+    foreach (row in movie.pixelRows) {\n\
+        foreach (pixel in row.pixels) {\n\
+            pixel = convertToBlackAndWhite(pixel);\n\
+        }\n\
+    }\n\
+}\n\
+\n\
+function scrubProcessing() {\n\
+    var center = screen.width / 2;\n\
+    movie.speed = mouse.position / center;\n\
+}\n\
+\n\
+pixelate();";
+
+editor.setValue(code);
+              }
             });
             $( "ul, li" ).disableSelection();
           });
@@ -123,12 +169,12 @@
                         <div class="col-md-2">fade</div>
 
                         <div class="col-md-5 pullLeft">
-                            <ul><li id="draggable" class="btn btn-method">Filter</button></li></ul>
-                            <ul><li id="draggable2" class="btn btn-method">Rotate</button></li></ul>
+                            <ul><li id="draggable" class="btn btn-method">Blur</button></li></ul>
+                            <ul><li id="draggable2" class="btn btn-method">Black &amp; White</button></li></ul>
                         </div>
                         <div class="col-md-6">
-                            <ul><li id="draggable3" class="btn btn-method">Blur</button></li></ul>
-                            <ul><li id="draggable4" class="btn btn-method">Shake</button></li></ul>
+                            <ul><li id="draggable3" class="btn btn-method">Invert</button></li></ul>
+                            <ul><li id="draggable4" class="btn btn-method">Scrubbed</button></li></ul>
                         </div>
                         <br /><br /><br /><br /><br /><br /><br /><br />
                         <div class="checkbox">
