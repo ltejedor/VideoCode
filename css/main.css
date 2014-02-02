@@ -109,22 +109,79 @@ textarea {
 
 .displayfirst{
     position: absolute!important;
-    width: 500px!important;
+    width: 400px!important;
     background-color: blue;
-    left: 0!important;
     z-index: 500;
 }
 
 .large-button{
-    width: 500px;
+  /* fallback */
+  background-color: #44A682;
+  background-repeat: repeat-x;
+
+  /* Safari 4-5, Chrome 1-9 */
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#44A682), to(#3E9474));
+
+  /* Safari 5.1, Chrome 10+ */
+  background: -webkit-linear-gradient(top, #44A682, #3E9474);
+
+  /* Firefox 3.6+ */
+  background: -moz-linear-gradient(top, #44A682, #3E9474);
+
+  /* IE 10 */
+  background: -ms-linear-gradient(top, #44A682, #3E9474);
+
+  /* Opera 11.10+ */
+  background: -o-linear-gradient(top, #44A682, #3E9474);
+
+    -webkit-box-shadow: 9px 0px 23px 0px rgba(50, 50, 50, 0.3);
+    -moz-box-shadow:    9px 0px 23px 0px rgba(50, 50, 50, 0.3);
+    box-shadow:         9px 0px 23px 0px rgba(50, 50, 50, 0.3);
+
+    width: 400px;
     margin-left: -15px;
-    background-color: #44A682;
+    height: 120px;
+    border: none;
+
+    color: #fff;
+    font-size: 1.4em;
+    font-weight: 600;
+
 }
 
+.large-button:hover{
+  /* Safari 4-5, Chrome 1-9 */
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#44A682), to(#44A682));
+
+  /* Safari 5.1, Chrome 10+ */
+  background: -webkit-linear-gradient(top, #44A682, #44A682);
+
+  /* Firefox 3.6+ */
+  background: -moz-linear-gradient(top, #44A682, #44A682);
+
+  /* IE 10 */
+  background: -ms-linear-gradient(top, #44A682, #44A682);
+
+  /* Opera 11.10+ */
+  background: -o-linear-gradient(top, #44A682, #44A682);
+
+}
 
 /* main screen and edit menu */
 
+.xbtn{
+    float: right;
+    width: 25px;
+    cursor: pointer;
+}
 
+.displaysecond{
+    position: absolute!important;
+    width: 480px!important;
+    z-index: 501;
+    background-color: #fff;
+    margin-left: -500px;
+}
 
 .hidden2{
     margin-top: 3px;
@@ -221,7 +278,8 @@ ul{
 }
 
 .overlay {
-    width: 100%;
+    margin-left: 400px;
+    width: 67%!important;
     height: 800px;
     background: #81DBBA; /* Old browsers */
     background: -moz-linear-gradient(110deg, #81DBBA 15%, #7D43A3 50%, #81DBBA 80%); /* FF3.6+ */
