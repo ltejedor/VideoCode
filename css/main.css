@@ -104,6 +104,30 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+.hidden2{
+    margin-top: 3px;
+    height: 1px;
+    opacity: 0;
+}
+
+.tabs-1{
+    border: #BDBFBF solid 1px;
+    height: 500px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+}
+
+.pullLeft{
+    margin-left: -40px;
+    }
+
+ul{
+    list-style-type: none;
+}
+
+.activebtn{
+}
 
 .nav a{
     font-family: 'Open Sans', sans-serif!important;
@@ -145,6 +169,7 @@ textarea {
     background-color: #44A682;
     color: #fff;
     height: 40px;
+    margin-right: 15px!important;
     }
 .btn-method:hover{
     color: #fff!important;

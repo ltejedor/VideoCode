@@ -44,6 +44,24 @@
               helper: "clone",
               revert: "invalid"
             });
+
+            $( "#draggable2" ).draggable({
+              connectToSortable: "#sortable",
+              helper: "clone",
+              revert: "invalid"
+            });
+
+            $( "#draggable3" ).draggable({
+              connectToSortable: "#sortable",
+              helper: "clone",
+              revert: "invalid"
+            });
+
+            $( "#draggable4" ).draggable({
+              connectToSortable: "#sortable",
+              helper: "clone",
+              revert: "invalid"
+            });
             $( "ul, li" ).disableSelection();
           });
 
@@ -73,23 +91,27 @@
                         </div>
                         <div class="col-md-2">reverse</div>
 
-                        <button class="btn btn-method">Method name 1</button>
-                        <button class="btn leftspace btn-method">Method name 2</button>
-
-                        <button class="btn btn-method">Method name 3</button>
-                        <button class="btn leftspace btn-method">Method name 4</button>
-
-                          <div class="checkbox">
+                        <div class="col-md-5 pullLeft">
+                            <ul><li id="draggable" class="btn btn-method">Method name 1</button></li></ul>
+                            <ul><li id="draggable2" class="btn btn-method">Method name 2</button></li></ul>
+                        </div>
+                        <div class="col-md-6">
+                            <ul><li id="draggable3" class="btn btn-method">Method name 3</button></li></ul>
+                            <ul><li id="draggable4" class="btn btn-method">Method name 4</button></li></ul>
+                        </div>
+                        <br /><br /><br /><br /><br /><br /><br /><br />
+                        <div class="checkbox">
                             <label>
                               <input type="checkbox"> Check one
                             </label>
-                          </div>
+                        </div>
 
-                          <div class="checkbox">
+
+                        <div class="checkbox">
                             <label>
                               <input type="checkbox"> Check me out
                             </label>
-                          </div>
+                        </div>
                     </div>
                     <div id="tabs">
                         <div class="btn-group">
@@ -98,16 +120,13 @@
                         </div>
 
                         <div class="tabs-1">
-                            <ul>
-                              <li id="draggable" class="ui-state-highlight">Drag me down</li>
-                            </ul>
 
                             <ul id="sortable">
-                              <li class="ui-state-default">Item 1</li>
-                              <li class="ui-state-default">Item 2</li>
-                              <li class="ui-state-default">Item 3</li>
-                              <li class="ui-state-default">Item 4</li>
-                              <li class="ui-state-default">Item 5</li>
+                              <li class="hidden2 ui-state-default"></li>
+                              <li class="hidden2 ui-state-default"></li>
+                              <li class="hidden2 ui-state-default"></li>
+                              <li class="hidden2 ui-state-default"></li>
+                              <li class="hidden2 ui-state-default"></li>
                             </ul>
                         </div>
 
