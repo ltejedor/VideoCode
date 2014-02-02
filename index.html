@@ -51,11 +51,33 @@
               revert: "invalid",
               stop: function( event, ui ) {
                 var code = "\
+/*\n\
+ * play()\n\
+ * \"Play\" is a function which can be applied to an object.  In our code the object is \"movie\".  \n\
+ * To apply a function to an object you place it directly after the object with a period in between.\n\
+ *\n\
+ * \"100\" \n\
+ * In our vidcode the integer \"100\" represents milliseconds.  In this case that is how often a code block will run (every 100 milliseconds).  \n\
+ * \n\
+ * scrubProcessing\n\
+ * is the function to run every \"100\" milliseconds.\n\
+ */\n\
 function pixelate() {\n\
     movie.play();\n\
     movie.interval(1000, blackAndWhiteProcessing);\n\
+    movie.interval(100, scrubProcessing);\n\
 }\n\
 \n\
+\n\
+/*\n\
+ * function\n\
+ * In vidcode, a function is a block of code which runs a certain behavior.  \n\
+ * You can \"call\" on a function to complete it's behavior in other parts of your code (and as many times as you want).\n\
+ * Our vidcode has 3 functions: pixelate(), blackandWhiteProcessing(), and scrubProcessing().\n\
+ *\n\
+ * foreach\n\
+ * foreach allows you to cycle through all the pixels in your video.  The computer reads each of your pixels in list form (a really loooong list), then paints them on the screen.  This is the secret to video processing!\n\
+  */\n\
 function blackAndWhiteProcessing() {\n\
     foreach (row in movie.pixelRows) {\n\
         foreach (pixel in row.pixels) {\n\
@@ -83,13 +105,35 @@ editor.setValue(code);
               helper: "clone",
               revert: "invalid",
               stop: function( event, ui ) {
+
                 var code = "\
+/*\n\
+ * play()\n\
+ * \"Play\" is a function which can be applied to an object.  In our code the object is \"movie\".  \n\
+ * To apply a function to an object you place it directly after the object with a period in between.\n\
+ *\n\
+ * \"100\" \n\
+ * In our vidcode the integer \"100\" represents milliseconds.  In this case that is how often a code block will run (every 100 milliseconds).  \n\
+ * \n\
+ * scrubProcessing\n\
+ * is the function to run every \"100\" milliseconds.\n\
+ */\n\
 function pixelate() {\n\
     movie.play();\n\
     movie.interval(1000, blackAndWhiteProcessing);\n\
     movie.interval(100, scrubProcessing);\n\
 }\n\
 \n\
+\n\
+/*\n\
+ * function\n\
+ * In vidcode, a function is a block of code which runs a certain behavior.  \n\
+ * You can \"call\" on a function to complete it's behavior in other parts of your code (and as many times as you want).\n\
+ * Our vidcode has 3 functions: pixelate(), blackandWhiteProcessing(), and scrubProcessing().\n\
+ *\n\
+ * foreach\n\
+ * foreach allows you to cycle through all the pixels in your video.  The computer reads each of your pixels in list form (a really loooong list), then paints them on the screen.  This is the secret to video processing!\n\
+  */\n\
 function blackAndWhiteProcessing() {\n\
     foreach (row in movie.pixelRows) {\n\
         foreach (pixel in row.pixels) {\n\
@@ -98,6 +142,12 @@ function blackAndWhiteProcessing() {\n\
     }\n\
 }\n\
 \n\
+\n\
+/*\n\
+ * center\n\
+ * center is a variable that refers to the coordinates of the center of the screen.\n\
+ * In your vidcode, \"center\" is a variable (\"var\").  A variable is a container for whatever you set it equal to, in this case you are equating \"center\" to the screen.width/2.\n\
+ */\n\
 function scrubProcessing() {\n\
     var center = screen.width / 2;\n\
     movie.speed = mouse.position / center;\n\
@@ -176,9 +226,12 @@ editor.setValue(code);
                             <ul><li id="draggable3" class="btn btn-method">Invert</button></li></ul>
                             <ul><li id="draggable4" class="btn btn-method">Scrubbed</button></li></ul>
                         </div>
-
                     </div>
                     <div id="tabs">
+                        <div class="clearfix">
+
+                            <button type="button" class="runbtn btn btn-primary">Run</button>
+                        </div>
                         <div class="btn-group">
                           <button type="button" class="tab1 btn btn-default">Visual Edit</button>
                           <button type="button" class="tab2 btn btn-default">Code Edit</button>
@@ -193,17 +246,10 @@ editor.setValue(code);
                               <li class="hidden2 ui-state-default"></li>
                               <li class="hidden2 ui-state-default"></li>
                             </ul>
-
                         </div>
                         <div class="tabs-2 hidden">
 
-                            <pre id="editor">function foo(items) {
-    for (var i = 0; i &lt; items.length; i++) {
-        alert("Cool Cat Video " + items[i]);
-    }
-
-}</pre>
-
+                            <pre id="editor"></pre>
                         </div>
 
                         <script src="src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
@@ -214,9 +260,7 @@ editor.setValue(code);
                         </script>
                     </div>
 
-                    <button class="runbtn btn btn-primary">Run</button>
                 </div>
-
 
                 <div class="col-md-7 overlay">
 
