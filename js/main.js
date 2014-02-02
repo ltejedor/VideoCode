@@ -21,7 +21,7 @@ $( document ).ready(function() {
     $(".layer1").click(function(){
 
     	$(".displayfirst").animate({
-		    "margin-left": 0}, "ease", function(){
+		    "margin-left": -15}, "ease", function(){
 		    	$(".getting-started").addClass("hidden2");
 		    });
     });
