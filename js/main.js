@@ -43,5 +43,6 @@ $( document ).ready(function() {
     $(".runbtn").click(function(){
     	$(".video1").addClass("hidden");
     	$(".video2").removeClass("hidden");
+        $('.buttons').hide();
     });
 });
