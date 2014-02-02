@@ -111,6 +111,17 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+/* First and Second Video */
+
+.video1{
+    position: absolute;
+    z-index: 5;
+    margin-left: 45px;
+}
+
+
+
+/* Popup upload video */
 .pops{
     width: 400px;
 }
@@ -121,7 +132,6 @@ textarea {
     margin-right: 25px!important;
     }
 
-/* Popup upload video */
 .popup{
     margin: 200px 0 0 300px;
     position: fixed;
