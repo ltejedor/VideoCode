@@ -1,4 +1,4 @@
-VideoCode
+VidCode
 =========
 
 SUW Ed Team
