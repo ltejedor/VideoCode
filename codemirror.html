@@ -10,33 +10,12 @@
 </head>
 <body style="margin:10px;">
 	<textarea id="codemirror" >
-/*
- * play()
- * \"Play\" is a function which can be applied to an object.  In our code the object is \"movie\".  
- * To apply a function to an object you place it directly after the object with a period in between.
- *
- * \"100\" 
- * In our vidcode the integer \"100\" represents milliseconds.  In this case that is how often a code block will run (every 100 milliseconds).  
- * 
- * scrubProcessing
- * is the function to run every \"100\" milliseconds.
- */
 function pixelate() {
     movie.play();
     movie.interval(1000, blackAndWhiteProcessing);
     movie.interval(100, scrubProcessing);
 }
 
-
-/*
- * function
- * In vidcode, a function is a block of code which runs a certain behavior.  
- * You can \"call\" on a function to complete it's behavior in other parts of your code (and as many times as you want).
- * Our vidcode has 3 functions: pixelate(), blackandWhiteProcessing(), and scrubProcessing().
- *
- * foreach
- * foreach allows you to cycle through all the pixels in your video.  The computer reads each of your pixels in list form (a really loooong list), then paints them on the screen.  This is the secret to video processing!
-  */
 function blackAndWhiteProcessing() {
     foreach (row in movie.pixelRows) {
         foreach (pixel in row.pixels) {
@@ -51,6 +30,18 @@ pixelate();
 	<script>
 		$(document).ready(function() {
 
+			var glossary = {
+				'function': 
+'In vidcode, a function is a block of code which executes a certain behavior.\
+ * You can \"call\" on a function to complete its behavior in other parts of your code (and as many times as you want).\
+ * Our vidcode has 3 functions: pixelate(), blackandWhiteProcessing(), and scrubProcessing().',
+ 				'play' :
+' * \"Play\" is a function which can be applied to an object.  In our code the object is \"movie\".\
+ * To apply a function to an object you place it directly after the object with a period in between.',
+ 				'foreach' :
+' * foreach allows you to cycle through all the pixels in your video.  The computer reads each of your pixels in list form (a really loooong list), then paints them on the screen.  This is the secret to video processing!'
+			};
+
 			var myCodeMirror = CodeMirror.fromTextArea(document.getElementById('codemirror'),  {
 				  value: "function myScript(){return 100;}\n",
 				  mode:  "javascript",
@@ -60,16 +51,16 @@ pixelate();
 
 			$(".cm-keyword:contains('function')")
 				.addClass('vc-glossary')
-				.attr('title', 'This is a function.')
+				.attr('title', glossary.function)
 				.data('toggle', 'tooltip')
-				.data('placement', 'right')
+				.data('placement', 'bottom')
 				.tooltip();
 
 			$(".cm-variable:contains('foreach')")
 				.addClass('vc-glossary')
-				.attr('title', 'This is a foreach loop.')
+				.attr('title', glossary.foreach)
 				.data('toggle', 'tooltip')
-				.data('placement', 'right')
+				.data('placement', 'bottom')
 				.tooltip();
 		});
 
