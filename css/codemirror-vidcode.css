@@ -1,0 +1,8 @@
+.CodeMirror {
+	height:95%;
+}
+
+.vc-glossary {
+	text-decoration: underline;
+	cursor: help;
+}
