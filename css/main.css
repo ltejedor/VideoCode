@@ -119,13 +119,14 @@ textarea {
     margin-left: 45px;
 }
 
-.video2{
+.video2 {
     position: absolute;
     z-index: 5;
-    margin-left: 45px;
+    left: 200px;
+    top: 100px;
+    width: 600px;
+    height: 450px;
 }
-
-
 
 /* Popup upload video */
 .pops{
@@ -243,7 +244,7 @@ textarea {
 position: absolute!important;
 z-index: 10000000;
 right: 10px;
-top: 210px;
+top: 235px;
     }
 
 /* main screen and edit menu */
@@ -318,15 +319,13 @@ ul{
 #editor {
     margin: 0;
     position: absolute;
-    top: 300px;
+    top: 340px;
     bottom: 0;
     left: 0;
     right: 0;
     height: 500px;
     z-index: 3;
 }
-
-
 
 .buttons{
     margin: 200px auto;
@@ -377,6 +376,18 @@ ul{
     -webkit-animation-iteration-count: infinite;
 }
 
+#controls {
+            display: inline-block;
+            vertical-align: top;
+        }
+
+#controls input {
+            width: 400px;
+        }
+
+canvas{
+            vertical-align: bottom;     }
+
 @-webkit-keyframes colorful {
     from {
         background-position: 0% 0%;
@@ -402,8 +413,14 @@ ul{
     z-index: 1;
 }
 
+.instruct-header{
+    font-size: 1.4em;
+    color: #44A682;
+}
 
-
+.instruct-body{
+    font-size: 1.1em
+}
 
 
 
